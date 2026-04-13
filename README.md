@@ -54,18 +54,5 @@ import mayorPhoto from '../assets/mayor.png'
 />
 ```
 
-## 📄 Adding Your CV
 
-Place your CV PDF in `public/files/Mayowa-Binuyo-Backend-Dev-Resume.pdf`
 
-The About section download button will automatically link to it.
-
-## 🌐 Deploying to Netlify
-
-```bash
-# Build first
-npm run build
-
-# Then drag the 'dist' folder to netlify.com/drop
-# Or connect your GitHub repo to Netlify for auto-deploy
-```
