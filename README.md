@@ -69,12 +69,3 @@ npm run build
 # Then drag the 'dist' folder to netlify.com/drop
 # Or connect your GitHub repo to Netlify for auto-deploy
 ```
-
-## ✏️ Customizing Content
-
-All your project, skill, and contact data is in the component files as plain arrays.
-Just edit the arrays to update content — no database needed.
-
-- **Projects** → `src/components/Projects.jsx` → `projects` array
-- **Skills** → `src/components/TechStack.jsx` → `stack` array  
-- **Services** → `src/components/Services.jsx` → `services` array
