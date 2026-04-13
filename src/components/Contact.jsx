@@ -12,19 +12,26 @@ const socials = [
 export default function Contact() {
   const [ref] = useReveal()
   const [sent, setSent] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
 
   async function handleSubmit(e) {
     e.preventDefault()
     const form = e.target
     const data = new FormData(form)
-    const res = await fetch('https://formspree.io/f/xovgwndd', {
-      method: 'POST',
-      body: data,
-      headers: { Accept: 'application/json' },
-    })
-    if (res.ok) {
-      setSent(true)
-      form.reset()
+
+    setIsLoading(true)
+    try {
+      const res = await fetch('https://formspree.io/f/xovgwndd', {
+        method: 'POST',
+        body: data,
+        headers: { Accept: 'application/json' },
+      })
+      if (res.ok) {
+        setSent(true)
+        form.reset()
+      }
+    } finally {
+      setIsLoading(false)
     }
   }
 
@@ -88,8 +95,14 @@ export default function Contact() {
                   />
                 </div>
 
-                <button type="submit" className="btn-primary w-full">
-                  Send Message <i className="fas fa-paper-plane ml-2 text-sm"></i>
+                <button type="submit" className="btn-primary w-full" disabled={isLoading}>
+                  {isLoading ? (
+                    <>
+                      Sending... <i className="fas fa-spinner fa-spin ml-2 text-sm"></i>
+                    </>
+                  ) : (
+                    <>Send Message <i className="fas fa-paper-plane ml-2 text-sm"></i></>
+                  )}
                 </button>
               </form>
             )}
