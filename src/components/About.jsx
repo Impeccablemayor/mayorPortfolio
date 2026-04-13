@@ -48,7 +48,7 @@ export default function About() {
             </div>
 
             <div className="flex flex-wrap gap-4 mt-8">
-              <a href="/files/Mayowa-Binuyo-Backend-Dev-Resume.pdf" download className="btn-primary text-sm">
+              <a href="/file/Mayowa_Binuyo_CV.pdf" download className="btn-primary text-sm">
                 <i className="fas fa-download mr-2"></i> Download CV
               </a>
               <a href="#contact" className="btn-outline text-sm">Contact Me</a>
