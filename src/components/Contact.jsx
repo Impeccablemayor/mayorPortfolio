@@ -10,7 +10,7 @@ const socials = [
 ]
 
 export default function Contact() {
-  const ref = useReveal()
+  const [ref] = useReveal()
   const [sent, setSent] = useState(false)
 
   async function handleSubmit(e) {

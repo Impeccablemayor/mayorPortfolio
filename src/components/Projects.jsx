@@ -37,7 +37,7 @@ const projects = [
 ]
 
 export default function Projects() {
-  const ref = useReveal()
+  const [ref] = useReveal()
 
   return (
     <section id="projects" className="py-28 relative" ref={ref}>

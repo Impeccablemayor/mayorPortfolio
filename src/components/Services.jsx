@@ -46,7 +46,7 @@ const services = [
 ]
 
 export default function Services() {
-  const ref = useReveal()
+  const [ref] = useReveal()
 
   return (
     <section id="services" className="py-28 bg-navy-soft relative" ref={ref}>
