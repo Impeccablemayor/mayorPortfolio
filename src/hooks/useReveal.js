@@ -23,11 +23,27 @@ export function useReveal() {
           }
         })
       },
-      { threshold: 0.1 }
+      {
+        threshold: 0.05, // Lower threshold to 5%
+        rootMargin: '50px' // Trigger 50px before entering viewport
+      }
     )
 
     if (ref.current) observer.observe(ref.current)
-    return () => observer.disconnect()
+
+    // Fallback: show elements after 2 seconds if not already visible
+    const fallbackTimer = setTimeout(() => {
+      if (ref.current && !alreadyVisible.current) {
+        ref.current.querySelectorAll('.reveal').forEach((el) => {
+          el.classList.add('visible')
+        })
+      }
+    }, 2000)
+
+    return () => {
+      observer.disconnect()
+      clearTimeout(fallbackTimer)
+    }
   }, [])
 
   return [ref, revealAll]
