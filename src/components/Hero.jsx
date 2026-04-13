@@ -7,11 +7,11 @@ export default function Hero() {
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-electric/10 rounded-full blur-3xl animate-pulse2 pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/8 rounded-full blur-3xl animate-pulse2 pointer-events-none" style={{ animationDelay: '1.5s' }} />
 
-      <div className="max-w-6xl mx-auto px-6 pt-28 pb-20 w-full">
+      <div className="max-w-6xl mx-auto px-6 pt-20 pb-16 sm:pt-28 sm:pb-20 w-full">
         <div className="flex flex-col lg:flex-row items-center gap-16">
 
           {/* Text */}
-          <div className="flex-1 text-left">
+          <div className="flex-1 text-center lg:text-left">
             {/* Status badge */}
             <div className="inline-flex items-center gap-2 bg-electric/10 border border-electric/20 rounded-full px-4 py-2 mb-8">
               <span className="glow-dot"></span>
@@ -27,7 +27,7 @@ export default function Hero() {
               Fullstack Web Developer
             </p>
 
-            <p className="font-body text-slate-400 text-lg leading-relaxed max-w-lg mb-10">
+            <p className="font-body text-slate-400 text-lg leading-relaxed max-w-xl mx-auto lg:mx-0 mb-10">
               I build scalable, secure web applications using{' '}
               <span className="text-white font-medium">.NET & C#</span> on the backend and{' '}
               <span className="text-white font-medium">React & Tailwind</span> on the frontend.
@@ -35,7 +35,7 @@ export default function Hero() {
             </p>
 
             {/* Buttons */}
-            <div className="flex flex-wrap gap-4 mb-12">
+            <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-12">
               <a href="#projects" className="btn-primary">
                 View My Work
               </a>
@@ -53,9 +53,9 @@ export default function Hero() {
             </div>
 
             {/* Social Links */}
-            <div className="flex items-center gap-6">
+            <div className="flex flex-wrap justify-center lg:justify-start items-center gap-6">
               <span className="font-mono text-xs text-slate-600 uppercase tracking-widest">Find me on</span>
-              <div className="flex gap-5">
+              <div className="flex flex-wrap gap-5 justify-center lg:justify-start">
                 {[
                   { icon: 'fa-github', href: 'https://github.com/Impeccablemayor', hover: 'hover:text-white' },
                   { icon: 'fa-linkedin', href: 'https://www.linkedin.com/in/mayowa-binuyo-63815521b', hover: 'hover:text-blue-400' },
@@ -73,12 +73,12 @@ export default function Hero() {
           </div>
 
           {/* Avatar */}
-          <div className="flex-shrink-0 animate-float">
-            <div className="relative">
+          <div className="flex-shrink-0 animate-float mt-10 lg:mt-0">
+            <div className="relative mx-auto lg:mx-0">
               {/* Outer ring */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-electric via-accent to-purple-500 p-1 blur-sm opacity-70" />
               <div className="relative p-1 bg-gradient-to-br from-electric via-accent to-purple-500 rounded-full">
-                <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-full bg-navy-card border-4 border-navy flex items-center justify-center overflow-hidden">
+                <div className="w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full bg-navy-card border-4 border-navy flex items-center justify-center overflow-hidden">
                   <img src={mayorPhoto} alt="Mayowa Binuyo" className="w-full h-full rounded-full object-cover object-top" />
                 </div>
               </div>
